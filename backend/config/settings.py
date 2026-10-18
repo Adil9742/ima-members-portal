@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-o3+yb#hf)up25prbez)31i8$x-$+$c)w&=**avb)z9bp$hen0d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "ima-members-portal.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
