@@ -1,0 +1,489 @@
+/* ================================
+   PAGE
+================================ */
+
+.office-page {
+  min-height: 100vh;
+  background: #f5f8fc;
+  color: #18324b;
+  font-family: inherit;
+}
+
+.office-container {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.office-hero {
+  padding: 28px 0 70px;
+  color: white;
+  background: linear-gradient(125deg, #102d4b, #1769a5);
+}
+
+.office-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 44px;
+  color: #e1efff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.office-back:hover {
+  color: white;
+}
+
+.office-eyebrow,
+.office-section-label {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.office-eyebrow {
+  color: #b9d9f5;
+}
+
+.office-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.office-term {
+  display: inline-block;
+  margin: 20px 0 12px;
+  padding: 8px 15px;
+  border: 1px solid #8bbce5;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.office-intro {
+  max-width: 600px;
+  margin-bottom: 0;
+  color: #e1edf8;
+  line-height: 1.7;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.office-content {
+  padding-top: 54px;
+  padding-bottom: 70px;
+}
+
+.office-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.office-section-label {
+  color: #2476b7;
+}
+
+.office-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.office-heading p:not(.office-section-label) {
+  margin: 0;
+  color: #65778a;
+  line-height: 1.6;
+}
+
+/* ================================
+   SEARCH BOX
+================================ */
+
+.office-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(360px, 100%);
+  padding: 12px 15px;
+  border: 1px solid #dce5ee;
+  border-radius: 10px;
+  background: white;
+  color: #718398;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.office-search:focus-within {
+  border-color: #2476b7;
+  box-shadow: 0 0 0 3px rgb(36 118 183 / 10%);
+}
+
+.office-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #18324b;
+  background: transparent;
+  font-size: 14px;
+}
+
+.office-search input::placeholder {
+  color: #94a3b4;
+}
+
+/* ================================
+   OFFICE BEARERS GRID
+================================ */
+
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+/* ================================
+   OFFICE BEARER CARD
+================================ */
+
+.office-card {
+  min-width: 0;
+  padding: 28px 24px 18px;
+  border: 1px solid #e5ebf2;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 24px rgb(19 49 76 / 5%);
+
+  /* Center the image and all member details */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.office-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbdff0;
+  box-shadow: 0 14px 30px rgb(19 49 76 / 10%);
+}
+
+/* ================================
+   PROFILE IMAGE
+================================ */
+
+.office-avatar {
+  display: grid;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  place-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  border: 4px solid #e0effb;
+  border-radius: 50%;
+  background: #e8f3fc;
+  color: #1769a5;
+  box-shadow: 0 4px 12px rgb(23 105 165 / 8%);
+}
+
+.office-profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* ================================
+   DESIGNATION
+================================ */
+
+.office-role {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 10px;
+  color: #2476b7;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   MEMBER NAME
+================================ */
+
+.office-card h3 {
+  margin: 0 0 8px;
+  color: #18324b;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   TERM
+================================ */
+
+.office-member-term {
+  margin: 0;
+  color: #718195;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   CARD FOOTER
+================================ */
+
+.office-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #edf1f5;
+  color: #78889a;
+  font-size: 13px;
+  text-align: left;
+}
+
+.office-card-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0f6fc;
+  color: #1769a5;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.office-empty {
+  grid-column: 1 / -1;
+  padding: 35px;
+  border: 1px dashed #cbd8e5;
+  border-radius: 12px;
+  background: white;
+  color: #65778a;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* ================================
+   LOADING AND ERROR MESSAGES
+================================ */
+
+.office-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 140px;
+  padding: 35px 20px;
+  color: #52677d;
+  text-align: center;
+}
+
+.office-spinner {
+  flex-shrink: 0;
+  animation: office-spin 1s linear infinite;
+}
+
+.office-error {
+  color: #a12626;
+  background: #fff5f5;
+  border: 1px solid #f3d4d4;
+  border-radius: 10px;
+}
+
+/* ================================
+   NOTE (IF USED)
+================================ */
+
+.office-note {
+  margin-top: 28px;
+  padding: 15px 18px;
+  border-left: 3px solid #e2a23b;
+  border-radius: 6px;
+  background: #fff8e9;
+  color: #6b572f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RETURN HOME LINK
+================================ */
+
+.office-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: #1769a5;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    gap 180ms ease,
+    color 180ms ease;
+}
+
+.office-home-link:hover {
+  gap: 12px;
+  color: #102d4b;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes office-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+  .office-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .office-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .office-search {
+    width: 100%;
+  }
+
+  .office-card {
+    padding: 26px 20px 18px;
+  }
+
+  .office-avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 540px) {
+  .office-container {
+    width: calc(100% - 28px);
+  }
+
+  .office-hero {
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+
+  .office-back {
+    margin-bottom: 35px;
+  }
+
+  .office-hero h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .office-intro {
+    font-size: 14px;
+  }
+
+  .office-content {
+    padding-top: 36px;
+    padding-bottom: 45px;
+  }
+
+  .office-heading {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .office-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .office-card {
+    padding: 25px 20px 18px;
+    border-radius: 14px;
+  }
+
+  .office-avatar {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 18px;
+  }
+
+  .office-card h3 {
+    font-size: 18px;
+  }
+
+  .office-card-footer {
+    margin-top: 22px;
+  }
+
+  .office-empty {
+    padding: 25px 18px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .office-card,
+  .office-home-link,
+  .office-search {
+    transition: none;
+  }
+
+  .office-card:hover {
+    transform: none;
+  }
+
+  .office-spinner {
+    animation: none;
+  }
+}

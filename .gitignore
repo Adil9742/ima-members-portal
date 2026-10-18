@@ -1,0 +1,23 @@
+# Python virtual environment
+/backend/venv/
+**/venv/
+.venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Django
+db.sqlite3
+media/
+__pycache__/
+*.py[cod]
+
+# React
+node_modules/
+dist/
+
+# Editor and OS
+.vscode/
+.DS_Store

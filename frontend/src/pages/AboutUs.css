@@ -1,0 +1,184 @@
+.about-page {
+  min-height: 75vh;
+  padding: 38px 20px 60px;
+  background: linear-gradient(180deg, #f1f5ff 0%, #ffffff 100%);
+}
+
+.about-container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.about-kicker {
+  color: #2867d8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-heading h1 {
+  margin: 10px 0;
+  color: #102f63;
+  font-size: clamp(23px, 3vw, 32px);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.about-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #62748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about-timeline {
+  display: grid;
+  gap: 24px;
+}
+
+.about-card {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding: 24px 25px 25px 19px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(28, 67, 125, 0.045);
+}
+
+.about-timeline-marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 31px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #2867f0;
+  color: #fff;
+}
+
+.about-timeline-marker::after {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  z-index: -1;
+  width: 6px;
+  height: calc(100% + 135px);
+  min-height: 80px;
+  border-radius: 6px;
+  background: #2867f0;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.about-card:last-child .about-timeline-marker::after {
+  display: none;
+}
+
+.about-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-card-content h2 {
+  margin: 2px 0 10px;
+  color: #16428e;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.about-card-content p {
+  margin: 0;
+  color: #344d6b;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about-card-content .about-extra {
+  margin-top: 16px;
+}
+
+.about-benefits {
+  display: grid;
+  gap: 5px;
+  margin-top: 17px;
+  color: #344d6b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.about-benefits strong {
+  color: #17365e;
+}
+
+.about-highlight {
+  display: block;
+  margin-top: 20px;
+  color: #1749bd;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.about-back {
+  margin-top: 28px;
+}
+
+.about-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #16428e;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-back a:hover {
+  color: #2867f0;
+}
+
+@media (max-width: 600px) {
+  .about-page {
+    padding: 28px 14px 40px;
+  }
+
+  .about-heading {
+    margin-bottom: 24px;
+  }
+
+  .about-card {
+    gap: 12px;
+    padding: 19px 15px 21px 13px;
+  }
+
+  .about-timeline-marker {
+    flex-basis: 29px;
+    width: 29px;
+    height: 29px;
+  }
+
+  .about-timeline-marker::after {
+    width: 5px;
+    height: calc(100% + 150px);
+  }
+
+  .about-card-content h2 {
+    font-size: 15px;
+  }
+
+  .about-card-content p,
+  .about-benefits {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,153 @@
+.scheme-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f6f9fc;
+  color: #102f63;
+}
+
+.scheme-banner {
+  min-height: 125px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(110deg, #327568, #9bc49b);
+}
+
+.scheme-banner-card {
+  width: min(100%, 650px);
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 25px #153c321c;
+}
+
+.scheme-breadcrumb {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.scheme-breadcrumb a {
+  color: #2867d8;
+  text-decoration: none;
+}
+
+.scheme-banner-card h1 {
+  margin: 0;
+  font-size: clamp(18px, 3vw, 25px);
+}
+
+.scheme-banner-card p {
+  margin: 8px 0 0;
+  color: #52677d;
+  font-size: 11px;
+}
+
+.scheme-content {
+  flex: 1;
+  width: min(100% - 32px, 800px);
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+.scheme-content > h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.scheme-pdf-card {
+  overflow: hidden;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 25px #102f6318;
+}
+
+.scheme-pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.scheme-pdf-toolbar strong {
+  font-size: 12px;
+}
+
+.scheme-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: #287668;
+  color: white;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.scheme-pdf-viewer {
+  height: min(65vh, 680px);
+  min-height: 350px;
+  overflow: hidden;
+  background: #292929;
+  border-radius: 5px;
+}
+
+.scheme-pdf-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: white;
+}
+
+.scheme-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: #214c91;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.scheme-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 12px;
+  background: #203f8d;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .scheme-banner {
+    min-height: 110px;
+    padding: 14px;
+  }
+
+  .scheme-banner-card {
+    padding: 13px;
+  }
+
+  .scheme-content {
+    width: calc(100% - 20px);
+    padding: 20px 0;
+  }
+
+  .scheme-pdf-card {
+    padding: 9px;
+  }
+
+  .scheme-pdf-viewer {
+    height: 65vh;
+    min-height: 300px;
+  }
+}
