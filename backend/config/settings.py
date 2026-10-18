@@ -91,20 +91,55 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+import os
+from pathlib import Path
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "ima_members_db",
-        "USER": "root",
-        "PASSWORD": "Adil@111",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-        "OPTIONS": {
-            "charset": "utf8mb4",
-        },
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+if os.environ.get("MYSQL_HOST"):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": os.environ["MYSQL_NAME"],
+            "USER": os.environ["MYSQL_USER"],
+            "PASSWORD": os.environ["MYSQL_PASSWORD"],
+            "HOST": os.environ["MYSQL_HOST"],
+            "PORT": os.environ.get("MYSQL_PORT", "3306"),
+            "OPTIONS": {
+                "ssl": {
+                    "ca": str(BASE_DIR / "ca.pem"),
+                },
+            },
+            "CONN_MAX_AGE": 60,
+        }
     }
-}
+else:
+    # Keep your existing local MySQL DATABASES configuration here.
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "ima_members_db",
+            "USER": "root",
+            "PASSWORD": "Adil@111",
+            "HOST": "127.0.0.1",
+            "PORT": "3306",
+        }
+    }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "ima_members_db",
+#         "USER": "root",
+#         "PASSWORD": "Adil@111",
+#         "HOST": "127.0.0.1",
+#         "PORT": "3306",
+#         "OPTIONS": {
+#             "charset": "utf8mb4",
+#         },
+#     }
+# }
 
 
 # Password validation
