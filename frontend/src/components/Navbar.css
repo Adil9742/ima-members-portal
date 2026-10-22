@@ -1,0 +1,150 @@
+/* Keep the shared navigation above page content */
+.topbar,
+.header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  color: #087f8c;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1100;
+  min-width: 190px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 12%);
+}
+
+.dropdown a {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 6px;
+  color: #243044;
+  text-decoration: none;
+}
+
+.dropdown a:hover,
+.dropdown a.active {
+  background: #f0f9fa;
+  color: #087f8c;
+}
+
+.mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  .navigation {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px 0 18px;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .dropdown {
+    position: static;
+    width: auto;
+    min-width: 0;
+    margin: 0 8px 8px;
+    box-shadow: none;
+  }
+
+  .nav-cta {
+    align-self: flex-start;
+    margin: 8px 12px;
+  }
+}

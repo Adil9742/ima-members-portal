@@ -1,7 +1,4 @@
 import {
-  Menu,
-  X,
-  ChevronDown,
   Search,
   Users,
   ShieldCheck,
@@ -9,47 +6,45 @@ import {
   CalendarDays,
   FileUp,
   ArrowRight,
-  Phone,
   Mail,
-  MapPin,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 
-const navItems = [
-  { label: "Home", path: "/" },
-  {
-    label: "About Us",
-    children: [
-      { label: "Our History", path: "/about-us" },
-      { label: "Office Bearers", path: "/office-bearers" },
-    ],
-  },
-  {
-    label: "Schemes",
-    children: [
-      { label: "Fss Schemes", path: "/fss-schemes" },
-      { label: "Health Schemes", path: "/health-schemes" },
-    ],
-  },
-  {
-    label: "Members",
-    children: [
-      { label: "Member Directory", path: "/office-bearers" },
-      { label: "Member Login", path: "/login" },
-    ],
-  },
-  {
-    label: "Activities",
-    children: [
-      { label: "Events", path: "/events" },
-      { label: "Gallery", path: "/gallery" },
-      { label: "News", path: "/news" },
-    ],
-  },
-  { label: "Contact", path: "/contact" },
-];
+// const navItems = [
+//   { label: "Home", path: "/" },
+//   {
+//     label: "About Us",
+//     children: [
+//       { label: "Our History", path: "/about-us" },
+//       { label: "Office Bearers", path: "/office-bearers" },
+//     ],
+//   },
+//   {
+//     label: "Schemes",
+//     children: [
+//       { label: "Fss Schemes", path: "/fss-schemes" },
+//       { label: "Health Schemes", path: "/health-schemes" },
+//     ],
+//   },
+//   {
+//     label: "Members",
+//     children: [
+//       { label: "Member Directory", path: "/office-bearers" },
+//       { label: "Member Login", path: "/login" },
+//     ],
+//   },
+//   {
+//     label: "Activities",
+//     children: [
+//       { label: "Events", path: "/events" },
+//       { label: "Gallery", path: "/gallery" },
+//       { label: "News", path: "/news" },
+//     ],
+//   },
+//   { label: "Contact", path: "/contact" },
+// ];
 
 const features = [
   {
@@ -79,13 +74,13 @@ const features = [
 ];
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("");
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const [activeMenu, setActiveMenu] = useState("");
   const [search, setSearch] = useState("");
 
   return (
     <div className="site">
-      <div className="topbar">
+      {/* <div className="topbar">
         <div className="container topbar-inner">
           <span>
             <Phone size={14} /> IMA Telangana State Branch
@@ -94,9 +89,9 @@ function App() {
             <Mail size={14} /> Official association portal
           </span>
         </div>
-      </div>
+      </div> */}
 
-      <header className="header">
+      {/* <header className="header">
         <div className="container header-inner">
           <a className="brand" href="#home" aria-label="IMA Telangana home">
             <img
@@ -174,7 +169,7 @@ function App() {
             </a>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       <main>
         <section className="hero" id="home">
@@ -369,7 +364,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="container footer-main">
           <div className="footer-brand">
             <div className="brand-mark">IMA</div>
@@ -392,7 +387,7 @@ function App() {
             placeholder contact details with verified official information.
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
