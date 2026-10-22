@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Search, UserRound, RefreshCw } from "lucide-react";
 import "./OfficeBearers.css";
 
-const API_URL = "http://127.0.0.1:8000/api/members/office-bearers/";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = `${API_BASE_URL}/api/members/office-bearers/`;
 
 export default function OfficeBearers() {
   const [officeBearers, setOfficeBearers] = useState([]);
